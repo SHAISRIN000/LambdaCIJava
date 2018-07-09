@@ -3,6 +3,7 @@ version: 0.1
 phases:
   install:
     commands:
+      - mvn clean install
       - aws cloudformation package --template-file template.yaml --s3-bucket samlocalsk 
                                    --output-template-file outputSamTemplate.yaml
 artifacts:
